@@ -88,10 +88,15 @@ body{
     flex-direction: column;
     z-index: 10000;
     width: 256px;
-    max-height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(to bottom, #233B3D,#112327); 
     padding-left: 31px;
     transition-duration: .15s;
+}
+.db-mbl-menu-border{
+    padding-bottom: 40px;
+    border-bottom: 2px solid #fff;
+    margin-right: 40px;
 }
 .left-menu h3{
     padding-top: 57px;
@@ -115,6 +120,27 @@ body{
 }
 .left-menu li a:hover{
     opacity: 1;
+}
+.left-filter-menu{
+    position: absolute;
+    top: 0;
+    left: -260px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    width: 256px;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #233B3D,#112327); 
+    padding-left: 31px;
+    transition-duration: .15s;
+}
+.left-filter-menu h3{
+    padding-top: 57px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 2px solid;
+    margin-right: 40px;
 }
 .close-btn{
     position: absolute;
@@ -438,7 +464,7 @@ body{
 /*SEARCH BAR  CARD CODE END*/
 .single-card-item-area{
     overflow-y: scroll;
-    height: 100vh;
+    max-height: 70vh;
 }
 .single-card-item-area::-webkit-scrollbar{
     display: none;
@@ -635,7 +661,18 @@ body{
   color: #fff;
 }
 /*Checkbox*/
-.filter-menu-item button::before{
+.filter-menu-item button i{
+    position: absolute;
+    left: -30px;
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    top: 13px;
+}
+    .filter-menu-item button{
+    position: relative;
+}
+/* .filter-menu-item button::before{
     font-family: FontAwesome;
     content: "\f0da";
     position: absolute;
@@ -643,7 +680,7 @@ body{
     height: 25px;
     width: 25px;
     font-size: 25px;
-}
+} */
 .dropdown-content label{
     font-family: Rajdhani-Regular;
     font-size: 24px;

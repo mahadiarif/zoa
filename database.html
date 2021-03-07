@@ -24,13 +24,52 @@
             <h3>MENU</h3>
            <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Database</a></li>
+            <li class="db-mbl-menu-border"><a href="#">Database</a></li>
 			<li><a href="#">Cyclers</a></li>
-			<li><a href="#">Sports Events in Israel</a></li>
+			<li><a href="#">Sports Events <br> in Israel</a></li>
 			<li><a href="#">Another Database</a></li>
 			<li><a href="#">Another Database</a></li>
         </ul>
     </section>
+	<section class="left-filter-menu">
+		<a class="close-btn"></a>
+		<h3>FILTER</h3>
+		<div class="db-right-place-sec">
+			<div class="year-main">
+			 <button class="place-btn">Place<i class="fa fa-caret-right"></i></button>
+			</div>
+		</div>
+		<div class="db-right-year-sec">
+			<div class="year-main">
+			  <button id="db-filter-btn" class="year-btn">Year<i class="fa fa-caret-right"></i></button>
+			  <div id="dropdown-content" class="dropdown-content">
+				<input type="checkbox" id="2016" name="" value="2016">
+				  <label for="2016">2016 [226]</label>
+				   <input type="checkbox" id="2017" name="" value="2017">
+				  <label for="2017">2017 [352]</label><input type="checkbox" id="2017" name="" value="2017">
+				  <label for="2018">2018 [42]</label><input type="checkbox" id="2018" name="" value="2018">
+				  <label for="2019">2019 [107]</label><input type="checkbox" id="2019" name="" value="2019">
+				  <label for="2020">2020 [234]</label><input type="checkbox" id="2020" name="" value="2020">
+			  </div>
+			</div>
+		</div>
+		<div class="db-right-team-sec">
+			 <button class="place-btn">Team<i class="fa fa-caret-right"></i></button>
+		</div>
+		<div class="db-right-event-sec">
+			 <button class="event-btn">Event Name<i class="fa fa-caret-right"></i></button>
+		</div>
+		<div class="db-right-status-sec">
+			 <button class="status-btn">Status<i class="fa fa-caret-right"></i></button>
+		</div>
+		<div class="db-right-pic-sec">
+			<button class="pic-btn">PIC<i class="fa fa-caret-right"></i></button>
+		</div>
+		<div class="db-right-category-sec">
+		   <button class="categori-btn">Category<i class="fa fa-caret-right"></i></button>
+		</div>
+		
+</section>
     <!--HAMBURGER MENU PART END-->
     <!--TOP MENU PART START-->
     <header class="wrapper-full bg-menu-top">
@@ -69,9 +108,9 @@
 								<div class="custom-select custom-select-sort">
                                   <select>
                                     <option value="0">Sort</option>
-                                    <option value="1">Audi</option>
-                                    <option value="2">BMW</option>
-                                    <option value="3">Citroen</option>
+                                    <option value="1">ITEM-1</option>
+                                    <option value="2">ITEM-2</option>
+                                    <option value="3">ITEM-3</option>
                                   </select>
                                 </div>
 							</div>
@@ -80,9 +119,9 @@
 								<div class="custom-select mobile-select-option">
 									<select>
 									  <option value="0">Position Asc</option>
-									  <option value="1">Audi</option>
-									  <option value="2">BMW</option>
-									  <option value="3">Citroen</option>
+									  <option value="1">ITEM-1</option>
+									  <option value="2">ITEM-2</option>
+									  <option value="3">ITEM-3</option>
 									</select>
 								  </div>
 								<button class="filter-button">
@@ -268,7 +307,7 @@
 						   <span>2018</span>
 					   </div>
 					</div>
-					 <!-- Mobile Single  Card -->
+					 <!-- Mobile Single  Card  ENd-->
 					<div class="single-item-card">
 					    <div class="single-card-icon">
 					        <div class="crd-icon">
@@ -535,12 +574,12 @@
 				    <div class="filter-menu-item">
 				        <div class="db-right-place-sec">
 				            <div class="year-main">
-                             <button class="place-btn">Place</button>
+                             <button class="place-btn">Place<i class="fa fa-caret-right"></i></button>
                             </div>
 				        </div>
 				        <div class="db-right-year-sec">
                             <div class="year-main">
-                              <button id="db-filter-btn" class="year-btn">Year</button>
+                              <button id="db-filter-btn" class="year-btn">Year<i class="fa fa-caret-right"></i></button>
                               <div id="dropdown-content" class="dropdown-content">
                                 <input type="checkbox" id="2016" name="" value="2016">
                                   <label for="2016">2016 [226]</label>
@@ -553,19 +592,19 @@
                             </div>
 				        </div>
 				        <div class="db-right-team-sec">
-				             <button class="place-btn">Team</button>
+				             <button class="place-btn">Team<i class="fa fa-caret-right"></i></button>
 				        </div>
-				        <div class="db-right-Event-sec">
-				             <button class="event-btn">Event Name</button>
+				        <div class="db-right-event-sec">
+				             <button class="event-btn">Event Name<i class="fa fa-caret-right"></i></button>
 				        </div>
-				        <div class="db-right-Status-sec">
-				             <button class="status-btn">Status</button>
+				        <div class="db-right-status-sec">
+				             <button class="status-btn">Status<i class="fa fa-caret-right"></i></button>
 				        </div>
 				        <div class="db-right-pic-sec">
-				            <button class="pic-btn">PIC</button>
+				            <button class="pic-btn">PIC<i class="fa fa-caret-right"></i></button>
 				        </div>
-				        <div class="db-right-categori-sec">
-				           <button class="categori-btn">Category</button>
+				        <div class="db-right-category-sec">
+				           <button class="categori-btn">Category<i class="fa fa-caret-right"></i></button>
 				        </div>
 				    </div>
 				    <div class="db-right-page-no">

@@ -7,6 +7,14 @@ $(document).ready(function(){
   });
 });
 $(document).ready(function(){
+  $(".close-btn").click(function(){
+    $(".left-filter-menu").animate({left: "-260px"}, 500);
+  });
+    $(".filter-button").click(function(){
+    $(".left-filter-menu").animate({left: "0"}, 500);
+  });
+});
+$(document).ready(function(){
     $('.owl-carousel').owlCarousel({
     items:1,
     margin:10,
@@ -17,7 +25,8 @@ $(document).ready(function(){
 $(document).ready(function(){
  $("#db-filter-btn").click(function(){
   $("#dropdown-content").toggle();
- });
+  $(this).find("i").toggleClass("fa-caret-right fa-caret-down");
+});
 });
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
