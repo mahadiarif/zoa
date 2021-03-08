@@ -28,6 +28,12 @@ $(document).ready(function(){
   $(this).find("i").toggleClass("fa-caret-right fa-caret-down");
 });
 });
+$(document).ready(function(){
+  $("#db-mbl-filter-btn").click(function(){
+   $("#dropdown-mbl-content").toggle();
+   $(this).find("i").toggleClass("fa-caret-right fa-caret-down");
+ });
+ });
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
