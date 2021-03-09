@@ -1,5 +1,22 @@
 @media screen and (max-width: 375px) 
 { 
+    .mbl-single-card-area-full .single-item-card{
+        flex-direction: column;
+    }
+        .mbl-single-card-area-full .single-card-icon{
+        width: 100%;
+    } 
+    #dropdown-mbl-content input[type=checkbox]:checked + label:before {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: #1B3033;
+      }
+      #dropdown-mbl-content input[type=checkbox] + label:before {
+        font-family: FontAwesome;
+        content: "\f00c";
+        border: 3px solid #ffffff;
+        background-color: #ffffff;
+    }
     .db-main-content-center{
         overflow-y: scroll;
     }

@@ -62,6 +62,9 @@ body{
 .wrapper{
     
 }
+.mr-137{
+    margin-right: -137px;
+}
   /*HANBURGER MENU PART CSS START*/
 .mobile-menu{
     position: relative;
@@ -734,6 +737,9 @@ body{
   background:#27504C;
 }
 /*Common CSS*/
+.pr-0{
+    padding-right: 0px!important;
+}
 .ml-30{
     margin-left: -30px;
 }
@@ -745,6 +751,23 @@ body{
 }
 .d-block{
     display: block;
+}
+.mbl-single-card-area-full{display: none;}
+.h-618{
+    height: 618px;
+}
+.h-639{
+    flex-direction: column;
+    width: 315px;
+    height: 639px;
+    overflow: hidden;
+    align-items: center;
+}
+.full-single-card-area{
+    display: none;
+}
+.full-single-card-area .single-card-text .single-card-btm{
+    padding-bottom: 50px;
 }
 /*Common CSS*/
 .db-right-page-no h1{
@@ -772,4 +795,7 @@ body{
     padding: 0px 20px;
     font-family: Rajdhani-Medium;
 }
+/* .full-single-card-area{
+    display: none;
+} */
 /**DATABASE PAGE CSS END**/
