@@ -59,7 +59,6 @@ select {
   -moz-appearance: none;
 }
 body{
-   background-color: #E4E4E4;
     font-family: Rajdhani-Regular;
 }
  .wrapper-full{
@@ -412,13 +411,9 @@ height: 542px;
 /*FOOTER PART CSS START*/
 .footer-full{
      background-image: linear-gradient(to bottom, #233B3D,#112327);
-     height: 224px;
-}
-.footer{
-    
 }
 .footer-text{
-    padding: 110px 88px 94px 51px;
+    padding: 94px 88px;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -427,9 +422,11 @@ height: 542px;
 .footer-text p{
     color: #fff;
     opacity: .5;
+    font-size: 28px;
 }
 .footer-text a{
     color: #fff;
+    font-size: 28px;
     
 }
 /*FOOTER PART CSS END*/
