@@ -220,8 +220,8 @@ body{
 }
 .carowsel-area-right a{
     position: absolute;
-    right: 41%;
-    bottom: 43px;
+    right: 40px;
+    bottom: 40px;
     width: 208px;
     height: 78px;
     background-image: linear-gradient(to bottom, #649094,#2F4B51);
@@ -230,11 +230,11 @@ body{
     font-size: 28px;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 }
 .carowsel-area-right{
     position: relative;
-    width: 100%;
+    width: calc(100% - 706px);
     background-color: #FFFFFF;
     padding-left: 102px;
     padding-top: 28px;
