@@ -1,0 +1,433 @@
+@font-face {
+    font-family: Rajdhani-Bold;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+  }
+  @font-face {
+    font-family: Rajdhani-Regular;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+  }
+  @font-face {
+    font-family: Rajdhani-SemiBold;
+    src: url(../fonts/Rajdhani-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: Rajdhani-Medium;
+    src: url(../fonts/Rajdhani-Medium.ttf);
+  }
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+img{
+    border-style: none;
+}
+a{
+    font-family: Rajdhani-Regular;
+    text-decoration: none;
+}
+h1{
+    font-family: Rajdhani-SemiBold;
+}
+h2{
+    font-family: Rajdhani-Medium;
+    font-size: 56px;
+}
+h3{
+    font-family: Rajdhani-Medium;
+}
+p{
+    font-family: Rajdhani-Medium;
+}
+input,select{
+    font-family: Rajdhani-Regular;
+}
+input:focus {
+  background-color: yellow;
+}
+select {
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+body{
+    font-family: Rajdhani-Regular;
+}
+ .wrapper-full{
+    width: 100%;
+    margin: 0px auto;
+    background-color: #F2F2F2;
+}
+.wrapper{
+    
+}
+  /*HANBURGER MENU PART CSS START*/
+.mobile-menu{
+    position: relative;
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 59px;
+    background-image: linear-gradient(to bottom, #233B3D,#112327);
+}
+.mobile-menu a{
+    padding: 25px;
+    font-size: 30px;
+    font-family: Rajdhani-SemiBold;
+    color: #fff;
+}
+  /*HANBURGER MENU PART CSS END*/
+  /*MOBILE MENU LEFT MENU PART CSS START*/
+.bg-black{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+.left-menu{
+    position: absolute;
+    top: 0;
+    left: -260px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    width: 256px;
+    height: 812px;
+    background-image: linear-gradient(to bottom, #233B3D,#112327); 
+    padding-left: 31px;
+    transition-duration: .15s;
+}
+.left-menu h3{
+    padding-top: 57px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 2px solid;
+    margin-right: 40px;
+}
+.left-menu li{
+    list-style: none;
+}
+.left-menu li a{
+    font-family: Rajdhani-Medium;
+    color: #FFFFFF;
+    font-size: 24px;
+    padding-top: 40px;
+    display: block;
+    opacity: .5;
+    transition-delay: .1s;
+}
+.left-menu li a:hover{
+    opacity: 1;
+}
+.close-btn{
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+    background-image: url(../img/icon/cross.png);
+    height: 26px;
+    width: 26px;
+    background-repeat: no-repeat;
+}
+
+  /*MOBILE MENU LEFT MENU PART CSS END*/
+  /*BANNER PART CSS START*/
+.top-banner-full{
+    position: relative;
+    background-image: url(../img/banner.png);
+    background-repeat: repeat;
+    width: 100%;
+    height: 560px; 
+}
+.overley{
+    position: absolute;
+    background-size: cover;
+    background-color: rgb(0, 0, 0,0.5);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.menu-top{
+    display: flex;
+    justify-content: center;
+	height:100px;
+	align-items:center;
+
+}
+.menu-top ul{
+}
+.menu-top ul li{
+    list-style: none;
+    display: inline-block;
+}
+.menu-top ul li a{
+    font-family: Rajdhani-Regular;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.75rem;
+}
+.menu-top ul li a:hover{
+    opacity: 0.8;
+}
+.banner-text-area{
+    display: flex;
+    flex-direction: column;
+}
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 136px;
+    bottom: 89px;
+}
+.banner-text h1{
+    color: #fff;
+    font-size: 11.6vw;
+}
+.banner-text p{
+    color: #fff;
+    font-size: 4.1vw;
+}
+  /*BANNER PART CSS END*/
+/*CAROUSEL PART CSS START*/
+.carowsel-area-full{
+    height: 291px;
+}
+.carowsel-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carowsel-area-left img{
+    width: 706px;
+    height: 100%;
+}
+.carowsel-area-right a{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 208px;
+    height: 78px;
+    background-image: linear-gradient(to bottom, #649094,#2F4B51);
+    padding: 20px;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+.carowsel-area-right{
+    position: relative;
+    width: calc(100% - 706px);
+    background-color: #FFFFFF;
+    padding-left: 102px;
+    padding-top: 28px;
+}
+.carousel-item h2{
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    font-size: 71px;
+    color: #00A292;
+}
+.carousel-item h1{
+    font-family: Rajdhani-Medium;
+    font-size: 49px;
+    color: #00A292;
+    padding-bottom: 5px;
+    
+}
+.owl-theme .owl-dots .owl-dot span {
+   border: 2px solid #00A292;
+    background-color: transparent;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #00A292;
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 49px;
+    text-align: left;
+}
+/*CAROUSEL PART CSS END*/
+/*OUR DATABASE PART CSS START*/
+.our-database-full{
+    height: 542px;
+}
+.our-database{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.our-db-left{
+    position: relative;
+    width: 81vw;
+    height: 542px;
+    padding: 80px;
+}
+.our-db-left h2{
+    padding-bottom: 30px;
+}
+.our-db-left p{
+    font-size: 28px;
+    line-height: 36px;
+}
+.our-db-left a{
+    position: absolute;
+    width: 208px;
+    height: 78px;
+    background-image: linear-gradient(to bottom, #233B3D,#112327);
+    padding: 20px;
+    color: #fff;
+    font-size: 28px;
+    right: 79px;
+    bottom: 79px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
+}
+.our-db-right{
+height: 542px;
+}
+.our-db-right img{
+    margin-top: 5px;
+    height: 100%;
+    width: 808px;
+}
+/*OUR DATABASE PART CSS END*/
+/*ABOUT CSS START*/
+.about-us-full{
+    height: 542px;
+    background-color: #fff;
+}
+.about-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.about-us-right{
+    position: relative;
+    width: 81vw;
+    padding: 80px;
+}
+.about-us-right h2{
+    margin-bottom: 30px;
+}
+.about-us-right p{
+    font-size: 28px;
+    line-height: 36px;
+}
+.about-us-left{}
+.about-us-left img{
+    height: 542px;
+    width: 808px;
+}
+/*OUR ABOUT US CSS END*/
+
+/*OUR TECHNOLOGY PART CSS START*/
+.our-technology-full{
+    height: 542px;
+}
+.our-technology{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.our-technology-left{
+    position: relative;
+    width: 1112px;
+    padding: 80px;
+}
+.our-technology-left h2{
+    padding-bottom: 30px;
+}
+.our-technology-left p{
+    font-size: 28px;
+    line-height: 36px;
+}
+.our-technology-right{}
+.our-technology-right img{
+    height: 542px;
+    width: 808px;
+}
+/*OUR TECHNOLOGY PART CSS END*/
+/*CONTACT US PART CSS START*/
+.contact-us-full{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 415px;
+    background-image: url(../img/contact.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.contact-us {
+    text-align: center;
+}
+.contact-us-text h2{
+    font-weight: normal;
+}
+.contact-us-text{
+    color: #fff;
+    
+}
+.contact-us-text p{
+    font-size: 28px;
+}
+.contact-us-text a{
+    display: inline-block;
+    width: 384px;
+    height: 78px;
+    background-image: linear-gradient(to bottom, #233B3D,#112327);
+    padding: 20px;
+    color: #fff;
+    font-size: 28px;
+    margin-top: 48px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*CONTACT US PART CSS END*/
+/*FOOTER PART CSS START*/
+.footer-full{
+     background-image: linear-gradient(to bottom, #233B3D,#112327);
+}
+.footer-text{
+    padding: 94px 88px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    color: #fff;
+}
+.footer-text p{
+    color: #fff;
+    opacity: .5;
+    font-size: 28px;
+}
+.footer-text a{
+    color: #fff;
+    font-size: 28px;
+    
+}
+/*FOOTER PART CSS END*/
+

@@ -1,0 +1,939 @@
+@font-face {
+    font-family: Rajdhani-Bold;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+  }
+  @font-face {
+    font-family: Rajdhani-Regular;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+  }
+  @font-face {
+    font-family: Rajdhani-SemiBold;
+    src: url(../fonts/Rajdhani-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: Rajdhani-Medium;
+    src: url(../fonts/Rajdhani-Medium.ttf);
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+  }
+  img {
+    border-style: none;
+  }
+  a {
+    font-family: Rajdhani-Regular;
+    text-decoration: none;
+  }
+  h1 {
+    font-family: Rajdhani-SemiBold;
+  }
+  h2 {
+    font-family: Rajdhani-Medium;
+    font-size: 56px;
+  }
+  h3 {
+    font-family: Rajdhani-Medium;
+  }
+  p {
+    font-family: Rajdhani-Medium;
+  }
+  input,
+  select {
+    font-family: Rajdhani-Regular;
+  }
+  input:focus {
+    background-color: #ffffff;
+  }
+  body {
+    max-height: 100vh;
+    background-color: #e4e4e4;
+    font-family: Rajdhani-Regular;
+  }
+  .wrapper-full {
+    width: 100%;
+    margin: 0px auto;
+    background-color: #f2f2f2;
+  }
+  /*RE-USEABLE CSS START*/
+  .pr-0 {
+    padding-right: 0px !important;
+  }
+  .ml-30 {
+    margin-left: -30px;
+  }
+  .mb-38 {
+    margin-bottom: 38px;
+  }
+  .d-none {
+    display: none;
+  }
+  .d-block {
+    display: block;
+  }
+  .mr-137 {
+    margin-right: -137px;
+  }
+  /*RE-USEABLE CSS END*/
+  
+  /*HANBURGER MENU PART CSS START*/
+  .mobile-menu {
+    position: relative;
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 59px;
+    background-image: linear-gradient(to bottom, #233b3d, #112327);
+  }
+  .mobile-menu a {
+    padding: 25px;
+    font-size: 30px;
+    font-family: Rajdhani-SemiBold;
+    color: #fff;
+  }
+  /*HANBURGER MENU PART CSS END*/
+  /*MOBILE MENU LEFT MENU PART CSS START*/
+  .left-menu {
+    position: absolute;
+    top: 0;
+    left: -260px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    width: 256px;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #233b3d, #112327);
+    padding-left: 31px;
+    transition-duration: 0.15s;
+  }
+  .db-mbl-menu-border {
+    padding-bottom: 40px;
+    border-bottom: 2px solid #fff;
+    margin-right: 40px;
+    opacity: 1 !important;
+    color: #fff;
+  }
+  .db-mbl-menu-border a {
+    opacity: 1 !important;
+  }
+  .left-menu h3 {
+    padding-top: 57px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 2px solid;
+    margin-right: 40px;
+  }
+  .left-menu li {
+    list-style: none;
+  }
+  .left-menu li a {
+    font-family: Rajdhani-Medium;
+    color: #ffffff;
+    font-size: 24px;
+    padding-top: 40px;
+    display: block;
+    opacity: 0.5;
+    transition-delay: 0.1s;
+  }
+  .left-menu li a:hover {
+    opacity: 1;
+  }
+  .left-filter-menu button {
+    position: relative;
+    font-family: Rajdhani-Medium;
+    font-size: 24px;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    margin-left: 22px;
+  }
+  .left-filter-menu .dropdown-content {
+    font-family: Rajdhani-Regular;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  .left-filter-menu .dropdown-content {
+    display: none;
+    margin-bottom: 10px;
+    max-height: 192px;
+    width: 200px;
+    overflow: hidden;
+    margin-left: 0px;
+  }
+  .left-filter-menu button i {
+    position: absolute;
+    left: -30px;
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    top: 13px;
+  }
+  .left-filter-menu {
+    position: absolute;
+    top: 0;
+    left: -260px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    width: 256px;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #233b3d, #112327);
+    padding-left: 31px;
+    transition-duration: 0.15s;
+  }
+  .left-filter-menu h3 {
+    padding-top: 57px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 2px solid;
+    margin-right: 40px;
+  }
+  .close-btn {
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+    background-image: url(../img/icon/cross.png);
+    height: 26px;
+    width: 26px;
+    background-repeat: no-repeat;
+  }
+  .single-item-card-mobile {
+    display: none;
+  }
+  
+  /*MOBILE MENU LEFT MENU PART CSS END*/
+  
+  .menu-top {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+  }
+  .menu-top ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  .menu-top ul li a {
+    font-family: Rajdhani-Regular;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.75rem;
+  }
+  .menu-top ul li a:hover {
+    opacity: 0.8;
+  }
+  .banner-text-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 136px;
+    bottom: 89px;
+  }
+  .banner-text h1 {
+    color: #fff;
+    font-size: 11.6vw;
+  }
+  .banner-text p {
+    color: #fff;
+    font-size: 4.1vw;
+  }
+  /*BANNER PART CSS END*/
+  /*DATABASE PAGE CSS START*/
+  .bg-menu-top {
+    background-image: linear-gradient(to bottom, #233b3d, #112327);
+  }
+  .bg-menu-top ul {
+    margin: auto;
+  }
+  .bg-menu-top a {
+    color: #fff;
+    font-size: 41px;
+    text-decoration: none;
+    padding-left: 73px;
+  }
+  
+  .db-main-content-full {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #f5f2f2, #c6d4d2);
+  }
+  .db-main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  /*DATABASE PAGE LEFT SECTION CODE START*/
+  .db-main-content-left {
+    height: 100vh;
+    width: 305px;
+    flex-grow: 1;
+  }
+  .db-main-content-left span {
+    font-family: Rajdhani-Regular;
+    font-size: 24px;
+    color: #1e2a57;
+    margin-left: 21px;
+    opacity: 40%;
+  }
+  .db-main-content-left .db-left-menu ul {
+    border-right: 2px solid #182042;
+    margin-top: 72px;
+    margin-bottom: 72px;
+    margin-right: 27px;
+    height: 809px;
+  }
+  .db-main-content-left .db-left-menu ul li {
+    list-style: none;
+    text-align: right;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-right: 27px;
+  }
+  .db-main-content-left .db-left-menu ul li a {
+    font-family: Rajdhani-Medium;
+    color: #233b3d;
+    opacity: 0.6;
+    font-size: 24px;
+    transition-delay: 0.1s;
+  }
+  .db-main-content-left .db-left-menu ul li a:hover {
+    opacity: 1;
+  }
+  /*DATABASE PAGE LEFT SECTION CODE END*/
+  /*DATABASE PAGE CENTER SECTION CODE START*/
+  .db-main-content-center {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    height: 100vh;
+    flex-grow: 3;
+  }
+  /*SEARCH BAR  CARD CODE START*/
+  .top-search-bar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    height: 289px;
+    width: 1071px;
+    z-index: 5;
+    padding: 30px 144px;
+    background-color: #d4d4d4;
+    border-radius: 0px 0px 21px 21px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+  .search-bar {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-bar .input-search {
+    height: 53px;
+    width: 592px;
+    margin-right: 27px;
+  }
+  .search-bar .search-select-option {
+    width: 164px;
+    height: 39px;
+  }
+  .search-bar .input-search input {
+    border-radius: 40px;
+    width: 100%;
+    background-image: url(../img/icon/search.png);
+    background-repeat: no-repeat;
+    background-position: 96% 10px;
+    background-size: 20px 20px;
+    padding: 12px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+  /* Mobile-Search-Item CSS */
+  .mobile-search-area {
+    display: none;
+  }
+  .filter-button {
+    font-family: Rajdhani-Regular;
+    width: 122px;
+    max-height: 39px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin-left: 7px;
+    background-color: #233b3d;
+    text-align: left;
+    color: #fff;
+    background-image: url(../img/icon/filter.png);
+    background-repeat: no-repeat;
+    background-position: 85% 12px;
+    background-size: 19.5px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+  /*Select Keyword Sort*/
+  .custom-select-sort {
+    width: 164px;
+    max-height: 39px;
+    border-radius: 10px;
+  }
+  /*Select Keyword Sort*/
+  /*Select for Page */
+  .custom-select-page {
+    width: 164px;
+    max-height: 39px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 18px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .custom-select-page .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 14px;
+  }
+  /*Select for Page */
+  /*Common Select-Option Code*/
+  .custom-select {
+    position: relative;
+    font-family: Rajdhani-Regular;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+    background-color: #233b3d;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,
+  .select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+  }
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: #233b3d;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  /*Common Select Code End*/
+  .suggestion-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 18px;
+    width: 783px;
+    height: 163px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+    overflow-y: scroll;
+  }
+  /*Suggetion Scroll Bar*/
+  .suggestion-card::-webkit-scrollbar {
+    width: 7px;
+    max-height: 10px;
+    height: 10px;
+  }
+  .suggestion-card::-webkit-scrollbar-track {
+    background: #859a98;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .suggestion-card::-webkit-scrollbar-thumb {
+    background: #27504c;
+  }
+  /*
+   Handle on hover 
+  .suggestion-card::-webkit-scrollbar-thumb:hover {
+    background: #859A98;
+      opacity: .9;
+  }
+  */
+  /*Keyword Card*/
+  .single-keyword {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    width: 164px;
+    min-height: 39px;
+    background-color: #27504c;
+    border-radius: 10px;
+    margin: 8px 6px 24px 6px;
+    padding: 10px 13px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+  .single-keyword a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+  }
+  .single-keyword a i {
+    color: #fff;
+  }
+  /*Keyword Card*/
+  /*SEARCH BAR  CARD CODE END*/
+  .single-card-item-area {
+    overflow-y: scroll;
+    max-height: 70vh;
+  }
+  .single-card-item-area::-webkit-scrollbar {
+    display: none;
+  }
+  .single-item-card {
+    color: #233b3d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Rajdhani-Medium;
+    width: 983px;
+    height: 302px;
+    border-radius: 23px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+  .single-card-icon {
+    margin-left: 28px;
+    margin-top: 15px;
+    width: 22%;
+  }
+  .single-card-icon .crd-icon img {
+    margin-right: 23px;
+    margin-bottom: 14px;
+  }
+  .single-item-card .crd-love span {
+    font-family: "Assistant", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #49615f;
+  }
+  .single-item-card .crd-love i {
+    font-size: 22px;
+    color: #49615f;
+  }
+  .single-item-card .crd-star i {
+    font-size: 18px;
+    color: #49615f;
+    margin-bottom: 19px;
+  }
+  .single-card-share {
+    display: flex;
+    width: 18%;
+    margin-top: 12px;
+    margin-right: 23px;
+    justify-content: flex-end;
+  }
+  .single-card-share a {
+    display: flex;
+    font-family: Rajdhani-SemiBold;
+    color: #49615f;
+  }
+  .single-card-share a i {
+    padding-right: 25px;
+    font-size: 22px;
+  }
+  .single-card-tp {
+    width: 60%;
+  }
+  .single-card-tp h1 {
+    font-size: 33px;
+    font-family: "Assistant", sans-serif;
+    font-weight: 600;
+    padding-bottom: 19px;
+    text-align: center;
+  }
+  .single-card-text {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .single-card-text p {
+    font-size: 18px;
+  }
+  .single-card-text h3,
+  span {
+    font-family: "Assistant", sans-serif;
+    font-weight: 700;
+  }
+  .single-card-cnter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 15.5px;
+    padding-bottom: 18.5px;
+  }
+  .single-card-cnter p {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .single-card-btm {
+    padding-top: 17.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .single-card-btm .crd-dicipline {
+    width: 62px;
+  }
+  .single-card-btm .crd-category {
+    width: 188px;
+  }
+  .single-card-btm .crd-place {
+    width: 158px;
+  }
+  .single-card-btm .crd-team {
+    width: 122px;
+  }
+  /*DATABASE PAGE CENTER SECTION CODE END*/
+  /*DATABASE PAGE RIGHT SECTION CODE START*/
+  .db-main-content-right {
+    width: 206px;
+    height: 100vh;
+    flex-grow: 1;
+    padding-right: 25px;
+    margin-left: 27px;
+  }
+  .db-main-content-right .filters-area h1 {
+    font-size: 36px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #233b3d;
+    margin-top: 39px;
+    margin-left: 15px;
+    color: #233b3d;
+    margin-bottom: 40px;
+    padding-left: 22px;
+  }
+  /**DATABASE RIGHT SECTION FILTER MENU CSS START**/
+  .filter-menu-item {
+    max-height: 615px;
+    overflow-y: scroll;
+    padding-left: 25px;
+    font-size: 24px;
+  }
+  .filter-menu-item button {
+    cursor: pointer;
+  }
+  .filter-menu-item::-webkit-scrollbar {
+    width: 7px;
+  }
+  .filter-menu-item::-webkit-scrollbar-track {
+    background: #859a98;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .filter-menu-item::-webkit-scrollbar-thumb {
+    background: #27504c;
+  }
+  .filter-menu-item a {
+    text-decoration: none;
+    display: block;
+  }
+  .filter-menu-item button {
+    font-family: Rajdhani-Medium;
+    font-size: 24px;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: transparent;
+    color: #233b3d;
+  }
+  /*Checkbox*/
+  .dropdown-content input[type="checkbox"] + label {
+    display: block;
+    cursor: pointer;
+    padding: 0.4em;
+  }
+  .dropdown-content input[type="checkbox"] {
+    display: none;
+  }
+  
+  .dropdown-content input[type="checkbox"] + label:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    border: 3px solid #233b3d;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 18px;
+    color: transparent;
+    font-size: 20.5px;
+    text-align: center;
+  }
+  
+  .dropdown-content input[type="checkbox"]:checked + label:before {
+    background-color: #233b3d;
+    border-color: #233b3d;
+    color: #fff;
+  }
+  /*Checkbox*/
+  .filter-menu-item button i {
+    position: absolute;
+    left: -30px;
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    top: 13px;
+  }
+  .filter-menu-item button {
+    position: relative;
+  }
+  
+  .filter-menu-item .dropdown-content label {
+    font-family: Rajdhani-Regular;
+    font-size: 24px;
+    color: #233b3d;
+  }
+  .filter-menu-item .dropdown-content {
+    display: none;
+    margin-bottom: 10px;
+    max-height: 192px;
+    width: 200px;
+    overflow-y: scroll;
+    margin-left: -30px;
+  }
+  
+  .filter-menu-item .dropdown-content::-webkit-scrollbar {
+    width: 7px;
+    max-height: 20px;
+    height: 80px;
+  }
+  .filter-menu-item .dropdown-content::-webkit-scrollbar-track {
+    background: #859a98;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .filter-menu-item .dropdown-content::-webkit-scrollbar-thumb {
+    background: #27504c;
+  }
+  
+  .mbl-single-card-area-full {
+    display: none;
+  }
+  .h-618 {
+    height: 618px;
+  }
+  .mobile-single-crd,
+  .single-card-icon-top,
+  .single-card-text-middle {
+    width: 100%;
+  }
+  .mobile-single-crd {
+    padding: 20px 30px;
+  }
+  .single-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .single-card-text-middle .pt-23 {
+    padding-top: 23px;
+  }
+  .pl-10 {
+    padding-left: 15px;
+  }
+  .tp-bt {
+    padding: 0px 0px 20px 0px;
+    border-bottom: 1px solid;
+  }
+  .mobile-single-crd .crd-love a,
+  i {
+    color: #27504c;
+  }
+  .single-card-icon-top a i {
+    font-size: 27px;
+  }
+  .mobile-single-crd .crd-icon img {
+    height: 26px !important;
+    margin-right: 7px;
+  }
+  .tp-bt p {
+    padding-top: 20px;
+  }
+  .d-flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .mbl-share-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  .single-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .single-card p {
+    font-size: 20px;
+  }
+  .justify-around {
+    justify-content: space-around;
+  }
+  .single-card-icon-top .card-icon {
+    margin-left: 10px;
+    margin-top: 16px;
+  }
+  .single-card-icon-top .card-icon img {
+    height: 24px;
+    width: 33px;
+  }
+  .single-card-text-middle {
+    text-align: center;
+  }
+  .single-card-text-middle h1 {
+    border-bottom: 1px solid #233b3d;
+    font-size: 33px;
+    width: 100%;
+    padding-bottom: 12px;
+    padding-top: 35px;
+  }
+  .mobile-single-crd {
+    display: flex;
+    flex-direction: column;
+    width: 315px;
+    height: 639px;
+    overflow: hidden;
+    align-items: center;
+    color: #233b3d;
+    font-family: Rajdhani-Medium;
+    border-radius: 23px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+  .mobile-single-crd .single-card-icon-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-single-crd .single-card-icon-top a {
+    display: block;
+    color: #49615f;
+  }
+  .single-card-text-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .full-single-card-area {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    display: none;
+  }
+  .full-single-card-area .single-card-text .single-card-btm {
+    padding-bottom: 50px;
+  }
+  /*Common CSS*/
+  .db-right-page-no h1 {
+    width: 130px;
+    font-size: 36px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    color: #233b3d;
+    margin-bottom: 25px;
+  }
+  .db-right-page-no {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 28px;
+    color: #233b3d;
+  }
+  .right-page-no {
+    margin-bottom: 35px;
+  }
+  .right-page-no span {
+    padding: 0px 20px;
+    font-family: Rajdhani-Medium;
+  }
+  /* .full-single-card-area{
+      display: none;
+  } */
+  /**DATABASE PAGE CSS END**/
+  /**OVERLAY PAGE CSS START**/
+  .overley-full {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+  }
+  /**OVERLAY PAGE CSS END**/
+  /**STIKY  MENU CSS START**/
+  .sticky-wrapper{
+      display: none;
+  }
+  /**STIKY  MENU CSS END**/
+
+  
