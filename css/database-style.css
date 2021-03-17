@@ -89,7 +89,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    height: 59px;
+    padding: 8px 20px;
     background-image: linear-gradient(to bottom, #233b3d, #112327);
   }
   .mobile-menu a {
@@ -102,12 +102,12 @@
   /*MOBILE MENU LEFT MENU PART CSS START*/
   .left-menu {
     position: absolute;
-    top: 0;
-    left: -260px;
+    top: 104px;
+    left: -300px;
     display: flex;
     flex-direction: column;
     z-index: 1000;
-    width: 256px;
+    width: 300px;
     min-height: 100vh;
     background-image: linear-gradient(to bottom, #233b3d, #112327);
     padding-left: 31px;
@@ -767,6 +767,7 @@
   
   .mbl-single-card-area-full {
     display: none;
+    height: 100vh;
   }
   .h-618 {
     height: 618px;
@@ -931,9 +932,10 @@
   }
   /**OVERLAY PAGE CSS END**/
   /**STIKY  MENU CSS START**/
-  .sticky-wrapper{
-      display: none;
-  }
+  /* .is-stiky{
+      height: 0!i;
+  } */
   /**STIKY  MENU CSS END**/
+
 
   

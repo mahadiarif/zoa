@@ -1,17 +1,20 @@
 $(document).ready(function(){
-  $("#sticker").sticky({topSpacing:0});
+  $(".mobile-menu").sticky({topSpacing:0});
+});
+$(document).ready(function(){
+  $(".bg-menu-top").sticky({topSpacing:0});
 });
 //MOBILE MENU  HIDE/SHOW JQUERY START
 $(document).ready(function(){
   $(".close-btn").click(function(){
-    $(".left-menu").animate({left: "-260px"}, 500);
+    $(".left-menu").animate({left: "-300px"}, 500);
     $(".block-hide").css({display:"block"});
-    $(".mobile-menu").css({display:"flex"});
+    // $(".mobile-menu").css({display:"flex"});
   });
     $(".hamburger").click(function(){
     $(".left-menu").animate({left: "0"});
     $(".block-hide").css({display:"none"});
-    $(".mobile-menu").css({display:"none"});
+    // $(".mobile-menu").css({display:"none"});
   });
 });
 //MOBILE MENU  HIDE/SHOW JQUERY END
@@ -30,14 +33,18 @@ $(document).ready(function(){
 //MOBILE CARD HIDE/SHOW JQUERY START
 $(document).ready(function(){
   $(".single-item-card-mobile").click(function(){
-    $(".mbl-single-card-area-full").css({display:"block"});
+    $(".mbl-single-card-area-full").css({
+      display: "flex",
+      justifyContent: "center",
+      alignItems: 'center'
+    });
     $(".block-hide").css({display:"none"});
     $(".mobile-menu").css({display:"none"});
   });
   $(".mobile-single-crd").click(function(){
     $(".mbl-single-card-area-full").css({display:"none"});
     $(".block-hide").css({display:"block"});
-    $(".mobile-menu").css({display:"blcok"});
+    $(".mobile-menu").css({display:"block"});
   });
 });
 //MOBILE CARD HIDE/SHOW JQUERY END
@@ -49,7 +56,7 @@ $(document).ready(function(){
 //MOBILE FILTER MENU  HIDE/SHOW JQUERY START
 $(document).ready(function(){
   $(".close-btn").click(function(){
-    $(".left-filter-menu").animate({left: "-260px"}, 500);
+    $(".left-filter-menu").animate({left: "-300px"}, 500);
     $(".block-hide").css({display:"block"});
     $(".mobile-menu").css({display:"flex"});
   });
